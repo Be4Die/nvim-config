@@ -1,32 +1,32 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        -- c = { "clang-format" },
-        -- cpp = { "clang-format" },
-        -- go = { "gofumpt", "goimports-reviser", "golines" },
+        c = { "clang-format" },
+        cpp = { "clang-format" },
+        go = { "gofumpt", "goimports", "golines" },
         -- python = { "isort", "black" },
     },
 
     formatters = {
-        -- -- C & C++
-        -- ["clang-format"] = {
-        --     prepend_args = {
-        --         "-style={ \
-        --                 IndentWidth: 4, \
-        --                 TabWidth: 4, \
-        --                 UseTab: Never, \
-        --                 AccessModifierOffset: 0, \
-        --                 IndentAccessModifiers: true, \
-        --                 PackConstructorInitializers: Never}",
-        --     },
-        -- },
-        -- -- Golang
-        -- ["goimports-reviser"] = {
-        --     prepend_args = { "-rm-unused" },
-        -- },
-        -- golines = {
-        --     prepend_args = { "--max-len=80" },
-        -- },
+        -- C & C++
+        ["clang-format"] = {
+            prepend_args = {
+                "-style={ \
+                         IndentWidth: 4, \
+                         TabWidth: 4, \
+                         UseTab: Never, \
+                         AccessModifierOffset: 0, \
+                         IndentAccessModifiers: true, \
+                         PackConstructorInitializers: Never}",
+            },
+        },
+        -- Golang
+        --["goimports-reviser"] = {
+        --    prepend_args = { "-rm-unused" },
+        --},
+        golines = {
+            prepend_args = { "--max-len=80" },
+        },
         -- -- Lua
         -- stylua = {
         --     prepend_args = {
