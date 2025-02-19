@@ -59,4 +59,12 @@ return {
             require("configs.mason-conform")
         end,
     },
+
+    {
+        "https://gitlab.com/itaranto/plantuml.nvim",
+        version = "*",
+        config = function()
+            require("plantuml").setup()
+        end,
+    },
 }
